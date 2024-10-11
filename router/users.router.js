@@ -28,6 +28,7 @@ const fileFilter = (req, file, cb) => {
 };
 
 const upload = multer({ storage: diskStorage, fileFilter: fileFilter });
+
 router.route("/").get(verifyToken, usersController.getAllUsers);
 
 router

@@ -20,7 +20,7 @@ app.use(express.json());
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
-
+console.log(path.join(__dirname, "uploads"));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/api/products", productsRouter);
